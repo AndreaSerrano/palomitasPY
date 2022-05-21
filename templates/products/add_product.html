@@ -1,0 +1,21 @@
+{% extends 'products/menu_products.html' %}
+
+{% block head %}
+    <title> {{ titulo }}</title>
+{% endblock %}
+
+{% block body %}
+    <section class="h-screen bg-red-200 w-3/4 flex items-center justify-center">
+        <div class="p-5 flex gap-y-2 flex-col items-center justify-center rounded-lg bg-slate-100 shadow-md">
+            <h2 class="font-bold text-3xl uppercase">Agregar Producto</h2>
+            <form action="{{url_for('add_product')}}" method="post" enctype="multipart/form-data" class="flex flex-col gap-y-px">
+                <input type="text" name="id_product" placeholder="ID del Producto" class="w-full p-2 rounded-md"><br>
+                <input type="text" name="name_product" placeholder="Nombre del Producto" class="w-full p-2 rounded-md"><br>
+                <input type="text" name="price_product" placeholder="Precio del Producto" class="w-full p-2 rounded-md"><br>
+                <textarea name="description_product" cols="30" rows="5" placeholder="Descripción del Producto" class="w-full p-2 rounded-md"></textarea><br>  
+                <input type="submit" class="w-full h-full bg-green-600 p-2 text-white rounded-md hover:ring hover:ring-green-600 hover:bg-stone-900" value="Agregar Producto">
+            </form>
+        </div>
+    </section>
+
+{% endblock%}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Link de Font Awesome (Fuente) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="../static/images/iconoPalomitas.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <main class="flex">
+        <!-- Inicia menú lateral -->
+        <aside id="menu" class="w-1/4 h-screen bg-red-500 flex flex-col justify-between">
+            <nav class="flex flex-col gap-y-9 items-center">
+                <a href="" class="mt-2">
+                    <img class="w-1/4 mx-auto" src="../../static/images/logoPrincipal.png" alt="Logo Palomitas">
+                </a>
+                <div class="flex flex-col items-end divide-y-2 font-semibold uppercase px-2 text-white">
+                        <a href="{{url_for('add_product')}}">Agregar Producto</a> 
+                        <a href="{{url_for('list_product')}}">Lista de Productos</a> 
+                        <a href="">Menú Principal</a> 
+                </div>
+            </nav>
+            <footer class="bg-red-500 text-white flex flex-col items-center text-center gap-y-2">
+                <h2 class="text-xl">Contacto</h2>
+                <i class="fas fa-map-marked-alt">Sta.María la Ribera Del.Cuauthémoc</i>
+                <div id="contact-mail" class="">
+                    <a href="">
+                        <i class="fas fa-envelope text-sm"> palomitas.algomas@gmail.com</i>
+                    </a>
+                </div>
+                <i class="fa-solid fa-phone text-sm"> 55-23-12-33-00</i>
+            </footer>
+        </aside> 
+        <!-- finaliza menú lateral -->
+
+        {% block body %} {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Link de Font Awesome (Fuente) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="../assets/images/iconoPalomitas.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Iniciar sesión</title>
+</head>
+<body>
+    <main class="w-full h-screen bg-red-400 flex items-center justify-center">
+        <div class="p-5 flex flex-col gap-y-px items-center justify-center rounded-lg bg-slate-100 shadow-md">
+            <h2 class="font-bold text-3xl uppercase">Iniciar Sesión</h2>
+            <form action="../products/index.html" method="post" class="flex flex-col gap-y-px">
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" class="w-full p-2 rounded-md">
+                <label for="contrasenia">Contraseña:</label>
+                <input type="password" name="contrasenia" class="w-full p-2 rounded-md"><br>
+                <input type="submit" class="w-full h-full bg-green-600 p-2 text-white rounded-md hover:ring hover:ring-green-600 hover:bg-green-300" value="Ingresar">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
